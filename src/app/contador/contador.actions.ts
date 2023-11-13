@@ -13,3 +13,5 @@ export const dividir = createAction(
   '[Contador] Dividir',
   props<{ numero: number }>() //usamos props de ngRx que es el payload
 );
+
+export const reset = createAction('[Contador] Reset');
