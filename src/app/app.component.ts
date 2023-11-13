@@ -15,9 +15,9 @@ export class AppComponent {
   contador:number = 0;
 
   constructor(private store: Store<AppState>){
-    //suscripcion al store
-    this.store.subscribe((state) => {
-      this.contador = state.contador
+    //escuchar un único elemento del state
+    this.store.select('contador').subscribe((contador) => {
+      this.contador = contador
     })
   }
 
